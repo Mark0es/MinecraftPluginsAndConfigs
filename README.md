@@ -10,9 +10,6 @@ Commands Made using MyCommand:
 
 
 
-
-
-
 Permissions:
 
 Restart mycommand.run.restart
