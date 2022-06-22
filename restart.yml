@@ -1,0 +1,88 @@
+restart1:
+ command: /restarttimer
+ type: RUN_AS_OPERATOR
+ runcmd:
+ - /broadcast Server Restarting in 1 minute!
+ - /restart30s
+ - /restart15s
+ - /restart5s
+ - /restart4s
+ - /restart3s
+ - /restart2s
+ - /restart1s
+ - /restartactual
+ register: true
+ permission-required: true
+ permission-node: mycommand.run.restart
+restart30s:
+ command: /restart30s
+ type: RUN_AS_OPERATOR
+ runcmd:
+ - $delay$/broadcast Server Restarting in 30 seconds!
+ register: false
+ delaytimer: 30
+ permission-required: true
+ permission-node: mycommand.run.restart
+restart15s:
+ command: /restart15s
+ type: RUN_AS_OPERATOR
+ runcmd:
+ - $delay$/broadcast Server Restarting in 15 seconds!
+ register: false
+ delaytimer: 45
+ permission-required: true   
+ permission-node: mycommand.run.restart
+restart5s:
+ command: /restart5s
+ type: RUN_AS_OPERATOR
+ runcmd:
+ - $delay$/broadcast Server Restarting in 5 seconds!
+ register: false
+ delaytimer: 55
+ permission-required: true
+ permission-node: mycommand.run.restart 
+restart6s:
+ command: /restart4s
+ type: RUN_AS_OPERATOR
+ runcmd:
+ - $delay$/broadcast Server Restarting in 4 seconds!
+ register: false
+ delaytimer: 56
+ permission-required: true
+ permission-node: mycommand.run.restart 
+restart3s:
+ command: /restart3s
+ type: RUN_AS_OPERATOR
+ runcmd:
+ - $delay$/broadcast Server Restarting in 3 seconds!
+ register: false
+ delaytimer: 57
+ permission-required: true
+ permission-node: mycommand.run.restart 
+restart2s:
+ command: /restart2s
+ type: RUN_AS_OPERATOR
+ runcmd:
+ - $delay$/broadcast Server Restarting in 2 seconds!
+ register: false
+ delaytimer: 58
+ permission-required: true
+ permission-node: mycommand.run.restart 
+restart1s:
+ command: /restart1s
+ type: RUN_AS_OPERATOR
+ runcmd:
+ - $delay$/broadcast Server Restarting in 1 seconds!
+ register: false
+ delaytimer: 59
+ permission-required: true
+ permission-node: mycommand.run.restart 
+restartactual:
+ command: /restartactual
+ type: RUN_CONSOLE
+ runcmd:
+ - $delay$/restart
+ register: false
+ delaytimer: 60
+ permission-required: true
+ permission-node: mycommand.run.restart 
